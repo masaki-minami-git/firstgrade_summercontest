@@ -1,0 +1,516 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+#splash {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background:rgb(230, 230, 230);
+      text-align:center;
+      color:#fff;
+    }
+    #splash_logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #splash_logo img {
+      width:380px;
+    }
+    .fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+}
+header{
+  width: 100vw;
+  height: 100vh;
+}
+  #hero{
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  height: 90vh;
+}
+#hero .title{
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+}
+#hero .brand img{
+  width: 100vw;
+}
+/* タイムライン */
+.timeline{
+	max-width: 30%;
+	width:100%;
+	margin-left:5%;
+  margin-top: 50px;
+	padding:0 30px;
+  
+}
+.timeline li{
+  position: relative;
+	list-style: none;
+	padding:0 0 20px 0;
+  transition-duration: 0.5s;
+}
+.timeline dl{
+	margin:0 0 20px 3em;
+  width: 100%;
+}
+.border-line {
+	position: absolute;
+	left:0.2em;
+	top:0;
+	width:2px;
+	height:0;
+	background: #ccc;
+}
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:10px;
+	height: 10px;
+	background:#666;
+	border-radius: 50%;
+}
+.history{
+  background-color: #f5f5f5;
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  height: 320px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  transition: 0.7s ease;
+}
+.history:hover{
+  transform: scale(95%);
+  transition: 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px;
+}
+.history dd img{
+  width: 300px;
+  border-radius: 10px;
+  transition: 0.7s ease;
+}
+.history dd:nth-of-type(1){
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.eiga{
+  font-size: 1.3rem;
+  padding: 30px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.copy{
+  font-style: italic;
+  padding-bottom: 40px;
+  font-size: 1.1rem;
+}
+.year{
+  font-family: 'Cormorant SC', serif;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.en{
+  font-family: 'Cormorant SC', serif;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+.yearLast{
+  font-family: 'Cormorant SC', serif;
+  font-size: 1.4rem;
+  padding-left: 25%;
+}
+/* スライド */
+.alubm{
+  margin: 0 auto;
+  width: 90%;
+  overflow: hidden;
+}
+.swiper-container {
+  width: 960px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.swiper-slide{
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.swiper-slide img{
+  display: block;
+  width: 100%;
+}
+body{
+  background-color: #ececec;
+}
+.tetete{
+  background-image: url(../img/22117719_s.jpg);
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin-bottom: 160px;
+}
+.master{
+  font-family: 'Cormorant SC', serif;
+  font-size: 3.5rem;
+  font-weight: 200;
+  text-align: center;
+  color: #555;
+  padding-bottom: 50px;
+}
+#modal01{
+  display: none;
+}
+#modal02{
+  display: none;
+}
+#modal03{
+  display: none;
+}
+#modal04{
+  display: none;
+}
+#modalInside01 ul{
+  background-image: url(../img/500x500.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 0px 45px;
+  list-style: none;
+  height: 500px;
+  padding-left: 350px;
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+}
+#modalInside ul li{
+  padding: auto;
+  color: #333;
+}
+#modalInside02 ul{
+  background-image: url(../img/kiki.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 0px 45px;
+  list-style: none;
+  height: 500px;
+  padding-left: 350px;
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+}
+#modalInside03 ul{
+  background-image: url(../img/kikujiro.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 0px 45px;
+  list-style: none;
+  height: 500px;
+  padding-left: 350px;
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+}
+#modalInside04 ul{
+  background-image: url(../img/sen.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 0px 45px;
+  list-style: none;
+  height: 500px;
+  padding-left: 350px;
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+}
+.masterpiece{
+  display: flex;
+  width: 100%;
+  margin-bottom: 160px;
+}
+.historyImgBox{
+  width: 70%;
+}
+.historyImg{
+  width: 70%;
+  z-index: -100;
+  position: relative;
+}
+.his1 img{
+  left: 2%;
+  position: absolute;
+  width: 300px;
+}
+.his2 img{
+  top: 100px;
+  left: 15%;
+  position: absolute;
+  width: 400px;
+}
+.his3 img{
+  top: 380px;
+  left: 10%;
+  position: absolute;
+  width: 352px;
+}
+.his4 img{
+  top: 600px;
+  left: 30%;
+  position: absolute;
+  width: 300px;
+}
+.his5 img{
+  top: 800px;
+  left: 10%;
+  position: absolute;
+  width: 300px;
+}
+.his6 img{
+  position: absolute;
+  top: 1200px;
+  left: 3%;
+  width: 300px;
+}
+.his7 img{
+  position: absolute;
+  width: 270px;
+  top: 1350px;
+  left: 40%;
+}
+/* ビデオ */
+.videoBox{
+  border: solid 1px black;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 160px;
+}
+.videoBox p{
+  text-align: center;
+  margin-top: 10%;
+}
+.videoBox p:nth-of-type(3){
+  font-family: 'Cormorant SC', serif;
+  font-size: 2.5rem;
+  color: #555;
+}
+.buy{
+  font-family: 'Cormorant SC', serif;
+  font-size: 1.6rem;
+  transition: 0.7s ease;
+  width: 160px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 10%;
+  border: 1px solid gray;
+  display: block;
+}
+.buy:hover{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 40px;
+  width: 165px;
+}
+.videoBox a{
+  text-decoration:none;
+  color: #555;
+  display: block;
+  height: 51.2px;
+  padding-top: 16px;
+
+}
+.videoitem{
+  margin: 0 auto;
+  width: 800px;
+  height: 450px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 32px 80px 7px;
+}
+.videoitem:nth-of-type(1)::after{
+  content: 'World Dream Orchestra 2021';
+  display: block;
+  text-align: end;
+  padding-top: 25px;
+  font-family: 'Homemade Apple', cursive;
+  color: #555;
+}
+.videoitem:nth-of-type(2)::after{
+  content: 'Future Orchestra Classic Vol.3';
+  display: block;
+  text-align: end;
+  padding-top: 25px;
+  font-family: 'Homemade Apple', cursive;
+  color: #555;
+}
+/* プロフィール */
+section:nth-of-type(4) div img{
+  width: 500px;
+  margin-right: 50px;
+}
+.profileBox{
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: center;
+  margin-bottom: 160px;
+}
+.profileItem:nth-of-type(2){
+  border: black 1px solid;
+  width: 500px;
+  height: 657.48px;
+  border-top: none;
+  border-right: none;
+  margin-left: 50px;
+  display: table;
+}
+.profileLink{
+  display: table-cell;
+  width: 300px;
+  vertical-align: middle;
+  padding-left: 20%;
+}
+.profileLink a{
+  text-decoration: none;
+}
+.profileLink p{
+  font-size: 1.2rem;
+  font-family: 'Cormorant SC', serif;
+  text-align: center;
+  color: #555;
+}
+.profileLink p:nth-of-type(1){
+  font-size: 2.3rem;
+  padding-bottom: 10px;
+}
+.profileLink p:nth-of-type(2){
+  padding-bottom: 40px;
+  font-size: 1.5rem;
+}
+.profileLink a:hover .stickarrow{
+  width: 250px;
+}
+.stickarrow{
+  margin-left: 25%;
+  display: block;
+  width: 200px;
+  height: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: skew(45deg);
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+/* フッター */
+footer{
+  text-align: center;
+  margin-top: 160px;
+  background-color: #999;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  color: #f5f5f5;
+}
+footer p img{
+  width: 300px;
+  right: 0%;
+}
+.copyright{
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #f5f5f5;
+  padding-bottom: 20px;
+}
+.footerBox{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.footerBox ul{
+  list-style-type: none;
+  width: 300px;
+}
+.footerBox ul li{
+  width: 180px;
+}
+.footerBox ul:nth-of-type(2){
+  display: flex;
+  align-items: center;
+}
+.footerBox ul:nth-of-type(2) li{
+  margin: 5px;
+}
+.footerBox ul:nth-of-type(1) li{
+    padding-bottom: 15px;
+}
+.footerBox ul:nth-of-type(1) li a{
+  text-decoration: none;
+  color: #f5f5f5;
+  transition: 0.3s ease;
+}
+.footerBox ul:nth-of-type(1){
+  align-items: flex-end;
+  margin-top: 3.5%;
+  width: 300px;
+}
+.footerBox ul:nth-of-type(1) li:hover a{
+  color: #cfcfcf;
+}
+
+/* フッターSNS */
+.footerBox ul:nth-of-type(2) li img{
+  width: 30px;
+  padding: 20px;
+}
+/* nav中身 */
+.drawer-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+ }
+ .drawer-menu li a img{
+   width: 130px;
+ }
+ .drawer-nav{
+     background-color: #ececec;
+     height: 120px;
+ }
+ .drawer-menu li:nth-of-type(5) a{
+   margin-right: 200px;
+ }
+.drawer-menu li a{
+  transition: 0.7s;
+}
+.drawer-menu-item:hover{
+  text-decoration: none;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  background-color: #eee;
+}
